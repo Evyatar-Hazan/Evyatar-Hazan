@@ -9,13 +9,13 @@ Welcome to my collection of free, fast, and privacy-focused data conversion tool
 
 ### 📄 JSON to CSV Converter
 Transform your JSON data into clean, structured CSV files.
-- **URL**: https://json-to-csv-converter.evyatarhazan.com/
+- **URL**: https://json-to-csv.evyatarhazan.com/
 - **Features**: Instant conversion, handles quoted fields, privacy-first design
 - **Use Case**: Export API responses, data analysis, spreadsheet imports
 
 ### 📊 CSV to JSON Converter
 Parse your CSV and convert it into structured JSON.
-- **URL**: https://csv-to-json-converter.evyatarhazan.com/
+- **URL**: https://csv-to-json.evyatarhazan.com/
 - **Features**: Header-based parsing, handles missing fields, privacy-first design
 - **Use Case**: API workflows, data transformation, modern app integration
 
