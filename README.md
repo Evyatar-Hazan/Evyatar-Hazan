@@ -19,6 +19,12 @@ Parse your CSV and convert it into structured JSON.
 - **Features**: Header-based parsing, handles missing fields, privacy-first design
 - **Use Case**: API workflows, data transformation, modern app integration
 
+### 🧩 JSON to XML Converter
+Convert JSON into clean, well-formed XML.
+- **URL**: https://json-to-xml.evyatarhazan.com/
+- **Features**: Handles nested objects/arrays, escapes XML special characters, privacy-first design
+- **Use Case**: Integrations, documentation, data pipelines
+
 ---
 
 ## 🛠 Tech Stack
