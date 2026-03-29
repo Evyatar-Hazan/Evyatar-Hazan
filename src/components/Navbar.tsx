@@ -121,37 +121,48 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-[88px] mx-6 h-fit bg-white/90 dark:bg-neutral-900/90 backdrop-blur-2xl border border-neutral-200 dark:border-neutral-800 rounded-3xl p-8 flex flex-col items-center gap-8 shadow-2xl pointer-events-auto sm:hidden overflow-hidden"
-          >
-            <div className="flex flex-col items-center gap-6 w-full">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => handleClick(e, item.href, item.name)}
-                  className={`text-2xl font-bold transition-colors ${
-                    active === item.name ? 'text-primary-500' : 'text-neutral-600 dark:text-neutral-400'
-                  }`}
-                >
-                  {t(`nav.${item.name}`)}
-                </a>
-              ))}
-            </div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/20 dark:bg-black/40 backdrop-blur-sm z-[-1] sm:hidden pointer-events-auto"
+            />
             
-            <div className="w-full h-px bg-neutral-200 dark:bg-neutral-800"></div>
-            
-            <button 
-              onClick={toggleLanguage}
-              className="w-full py-4 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-2xl text-lg font-bold flex items-center justify-center gap-2"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 top-[88px] mx-6 h-fit bg-white/90 dark:bg-neutral-900/90 backdrop-blur-2xl border border-neutral-200 dark:border-neutral-800 rounded-3xl p-8 flex flex-col items-center gap-8 shadow-2xl pointer-events-auto sm:hidden overflow-hidden"
             >
-              <span>{i18n.language === 'en' ? 'עברית (HE)' : 'English (EN)'}</span>
-            </button>
-          </motion.div>
+              <div className="flex flex-col items-center gap-6 w-full">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => handleClick(e, item.href, item.name)}
+                    className={`text-2xl font-bold transition-colors ${
+                      active === item.name ? 'text-primary-500' : 'text-neutral-600 dark:text-neutral-400'
+                    }`}
+                  >
+                    {t(`nav.${item.name}`)}
+                  </a>
+                ))}
+              </div>
+              
+              <div className="w-full h-px bg-neutral-200 dark:bg-neutral-800"></div>
+              
+              <button 
+                onClick={toggleLanguage}
+                className="w-full py-4 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-2xl text-lg font-bold flex items-center justify-center gap-2"
+              >
+                <span>{i18n.language === 'en' ? 'עברית (HE)' : 'English (EN)'}</span>
+              </button>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>
