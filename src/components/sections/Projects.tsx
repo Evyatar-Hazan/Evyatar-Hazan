@@ -7,6 +7,12 @@ const Projects = () => {
 
   const projects = [
     {
+      id: "online_converter",
+      tags: ["React", "TypeScript", "Vite", "js-yaml"],
+      githubUrl: "https://github.com/Evyatar-Hazan/online-converter",
+      liveUrl: "#"
+    },
+    {
       id: "ai_automation",
       tags: ["Python", "YOLO", "Appium", "Jenkins"],
       githubUrl: "#",
