@@ -1,21 +1,25 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Mail } from 'lucide-react';
 import Button from '../components/Button';
-// import Card from '../components/Card'; // For future expansion
 
 const Home = () => {
+  const scrollTo = (id: string) => {
+    const el = document.querySelector(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6 pt-20">
       {/* Background Glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600/20 blur-[120px] rounded-full -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full -z-10 animate-pulse delay-1000" />
+      <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-primary-600/20 blur-[120px] rounded-full -z-10 animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-purple-600/15 blur-[120px] rounded-full -z-10 animate-pulse delay-1000" />
 
       <main className="max-w-4xl w-full text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-4 inline-block px-4 py-1.5 rounded-full border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm text-neutral-400 text-sm font-medium"
+          className="mb-8 inline-block px-4 py-1.5 rounded-full border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm text-neutral-400 text-sm font-medium"
         >
           Available for new opportunities
         </motion.div>
@@ -47,11 +51,11 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Button variant="primary" className="group">
+          <Button onClick={() => scrollTo('#projects')} variant="primary" className="group">
             View My Projects
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          <Button variant="outline" className="group">
+          <Button onClick={() => scrollTo('#contact')} variant="outline" className="group bg-neutral-950/50 backdrop-blur-md">
             Contact Me
             <Mail className="w-4 h-4 transition-transform group-hover:scale-110" />
           </Button>
@@ -63,17 +67,15 @@ const Home = () => {
           transition={{ duration: 1, delay: 1 }}
           className="mt-16 flex items-center justify-center gap-6"
         >
-          <a href="#" className="p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition-all">
+          <a href="https://github.com/Evyatar-Hazan" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 hover:bg-neutral-800 transition-all">
             <Github className="w-6 h-6" />
           </a>
-          {/* Add more social icons here */}
+          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('#contact'); }} className="p-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 hover:bg-neutral-800 transition-all">
+            <Mail className="w-6 h-6" />
+          </a>
         </motion.div>
       </main>
-
-      <footer className="absolute bottom-10 text-neutral-600 text-sm">
-        © {new Date().getFullYear()} Evyatar Hazan. Built with passion.
-      </footer>
-    </div>
+    </section>
   );
 };
 

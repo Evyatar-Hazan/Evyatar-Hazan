@@ -1,0 +1,97 @@
+import { motion } from 'framer-motion';
+import { Mail, Send } from 'lucide-react';
+import Button from '../Button';
+
+const Contact = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add logic here to interact with form service
+    alert("Message sent! (Mock)");
+  };
+
+  return (
+    <section id="contact" className="py-24 px-6 min-h-[80vh] flex items-center justify-center relative">
+      <div className="max-w-4xl w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Let's work <span className="text-primary-500">together</span>
+          </h2>
+          <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
+            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-12 bg-neutral-900/40 p-8 md:p-12 rounded-3xl border border-neutral-800 backdrop-blur-xl">
+          <div className="flex flex-col justify-center">
+            <div className="mb-10">
+              <h3 className="text-2xl font-bold text-white mb-2">Get in touch</h3>
+              <p className="text-neutral-400">Fill out the form and I'll be in touch as soon as possible.</p>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 text-neutral-300">
+                <div className="p-4 bg-neutral-800/50 rounded-full text-primary-400">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-neutral-500 font-medium">Email</p>
+                  <a href="mailto:hello@example.com" className="text-lg hover:text-primary-400 transition-colors">
+                    hello@example.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-neutral-400 mb-2">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-600"
+                placeholder="John Doe"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-400 mb-2">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-600"
+                placeholder="john@example.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-neutral-400 mb-2">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                className="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-600 resize-none"
+                placeholder="Tell me about your project..."
+              />
+            </div>
+            <Button type="submit" className="w-full group">
+              Send Message
+              <Send className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
