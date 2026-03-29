@@ -1,7 +1,7 @@
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import { useState } from 'react';
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 
 const navItems = [
@@ -15,8 +15,17 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [active, setActive] = useState('Home');
+  const [isOpen, setIsOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -30,6 +39,7 @@ const Navbar = () => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, name: string) => {
     e.preventDefault();
     setActive(name);
+    setIsOpen(false);
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -46,18 +56,20 @@ const Navbar = () => {
         visible: { y: 0 },
         hidden: { y: "-100%" }
       }}
-      animate={hidden ? "hidden" : "visible"}
+      animate={hidden && !isOpen ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 w-full z-50 flex justify-center py-4 px-6 pointer-events-none"
     >
-      <div className="bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl border border-neutral-200 dark:border-neutral-800 rounded-full px-6 py-3 flex items-center gap-6 shadow-2xl pointer-events-auto transition-colors duration-500">
+      <div className="bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl border border-neutral-200 dark:border-neutral-800 rounded-full px-6 py-3 flex items-center justify-between w-full max-w-2xl shadow-2xl pointer-events-auto transition-colors duration-500">
         <a 
           href="#home" 
           onClick={(e) => handleClick(e, '#home', 'Home')}
-          className="text-neutral-900 dark:text-white font-bold tracking-tight text-xl mr-4 rtl:mr-0 rtl:ml-4 transition-colors"
+          className="text-neutral-900 dark:text-white font-bold tracking-tight text-xl transition-colors"
         >
           EH<span className="text-primary-500">.</span>
         </a>
+
+        {/* Desktop Nav */}
         <div className="hidden sm:flex items-center gap-6">
           {navItems.map((item) => (
             <a
@@ -88,7 +100,60 @@ const Navbar = () => {
             {i18n.language === 'en' ? 'עב' : 'EN'}
           </button>
         </div>
+
+        {/* Mobile Menu Button */}
+        <div className="sm:hidden flex items-center gap-4">
+          <button 
+            onClick={toggleTheme}
+            className="p-1.5 text-neutral-500 dark:text-neutral-400 transition-colors"
+          >
+            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-1.5 text-neutral-900 dark:text-white transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 top-[88px] mx-6 h-fit bg-white/90 dark:bg-neutral-900/90 backdrop-blur-2xl border border-neutral-200 dark:border-neutral-800 rounded-3xl p-8 flex flex-col items-center gap-8 shadow-2xl pointer-events-auto sm:hidden overflow-hidden"
+          >
+            <div className="flex flex-col items-center gap-6 w-full">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href, item.name)}
+                  className={`text-2xl font-bold transition-colors ${
+                    active === item.name ? 'text-primary-500' : 'text-neutral-600 dark:text-neutral-400'
+                  }`}
+                >
+                  {t(`nav.${item.name}`)}
+                </a>
+              ))}
+            </div>
+            
+            <div className="w-full h-px bg-neutral-200 dark:bg-neutral-800"></div>
+            
+            <button 
+              onClick={toggleLanguage}
+              className="w-full py-4 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-2xl text-lg font-bold flex items-center justify-center gap-2"
+            >
+              <span>{i18n.language === 'en' ? 'עברית (HE)' : 'English (EN)'}</span>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

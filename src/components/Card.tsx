@@ -12,8 +12,8 @@ const Card = ({ children, className = '' }: CardProps) => {
   const mouseXPct = useMotionValue(0.5);
   const mouseYPct = useMotionValue(0.5);
 
-  const rotateX = useTransform(mouseYPct, [0, 1], [3, -3]);
-  const rotateY = useTransform(mouseXPct, [0, 1], [-3, 3]);
+  const rotateX = useTransform(mouseYPct, [0, 1], [2, -2]);
+  const rotateY = useTransform(mouseXPct, [0, 1], [-2, 2]);
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     const { left, top, width, height } = currentTarget.getBoundingClientRect();

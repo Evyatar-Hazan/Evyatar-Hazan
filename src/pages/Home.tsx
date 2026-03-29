@@ -42,7 +42,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-bold tracking-tight mb-4 flex flex-wrap justify-center items-center gap-x-4 bg-gradient-to-b from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-500 bg-clip-text text-transparent transition-colors duration-500"
+          className="text-5xl md:text-8xl font-bold tracking-tight mb-4 flex flex-wrap justify-center items-center gap-x-4 bg-gradient-to-b from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-500 bg-clip-text text-transparent transition-colors duration-500"
         >
           {t('home.greeting')} 
           <span className="text-primary-500 inline-flex">
@@ -63,7 +63,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-2xl md:text-3xl font-semibold mb-6 text-neutral-800 dark:text-neutral-200 transition-colors duration-500"
+          className="text-xl md:text-3xl font-semibold mb-6 text-neutral-800 dark:text-neutral-200 transition-colors duration-500"
         >
           {t('home.subtitle')}
         </motion.h2>

@@ -84,7 +84,7 @@ const Contact = () => {
                 id="name"
                 name="name"
                 required
-                className="w-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl px-4 py-3 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-400 dark:placeholder:text-neutral-600"
+                className="w-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl px-4 py-3 text-base text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-400 dark:placeholder:text-neutral-600"
                 placeholder={t('contact.form.namePh')}
               />
             </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                 id="email"
                 name="email"
                 required
-                className="w-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl px-4 py-3 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-400 dark:placeholder:text-neutral-600"
+                className="w-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl px-4 py-3 text-base text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-400 dark:placeholder:text-neutral-600"
                 placeholder={t('contact.form.emailPh')}
               />
             </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                 name="message"
                 required
                 rows={4}
-                className="w-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl px-4 py-3 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-400 dark:placeholder:text-neutral-600 resize-none"
+                className="w-full bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl px-4 py-3 text-base text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all placeholder:text-neutral-400 dark:placeholder:text-neutral-600 resize-none"
                 placeholder={t('contact.form.msgPh')}
               />
             </div>

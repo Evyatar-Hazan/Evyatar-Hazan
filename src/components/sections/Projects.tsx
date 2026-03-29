@@ -56,7 +56,7 @@ const Projects = () => {
                   href={project.githubUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center gap-2 text-sm font-medium"
+                  className="flex-1 py-3 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center justify-center gap-2 text-sm font-medium border border-neutral-200 dark:border-neutral-800 rounded-xl bg-neutral-50 dark:bg-neutral-900/50"
                 >
                   <Github className="w-4 h-4" /> {t('projects.code')}
                 </a>
@@ -64,7 +64,7 @@ const Projects = () => {
                   href={project.liveUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center gap-2 text-sm font-medium mr-auto rtl:mr-0 rtl:ml-auto ltr:ml-auto"
+                  className="flex-1 py-3 text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors flex items-center justify-center gap-2 text-sm font-medium border border-neutral-200 dark:border-neutral-800 rounded-xl bg-neutral-50 dark:bg-neutral-900/50"
                 >
                   <ExternalLink className="w-4 h-4" /> {t('projects.liveDemo')}
                 </a>
