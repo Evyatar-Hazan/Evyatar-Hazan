@@ -11,24 +11,6 @@ const Projects = () => {
       tags: ["React", "TypeScript", "Vite", "js-yaml"],
       githubUrl: "https://github.com/Evyatar-Hazan/online-converter",
       liveUrl: "https://online-converter.evyatarhazan.com"
-    },
-    {
-      id: "ai_automation",
-      tags: ["Python", "YOLO", "Appium", "Jenkins"],
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      id: "spool",
-      tags: ["React Native", "Node.js", "AWS", "Algorithms"],
-      githubUrl: "#",
-      liveUrl: "https://carfully.online"
-    },
-    {
-      id: "password_gen",
-      tags: ["React Native", "TypeScript", "Cryptography"],
-      githubUrl: "https://github.com/Evyatar-Hazan",
-      liveUrl: "#"
     }
   ];
 
