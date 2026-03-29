@@ -64,7 +64,9 @@
       "emailPh": "israel@example.com",
       "msgLbl": "הודעה",
       "msgPh": "ספרו לי על הפרויקט שלכם...",
-      "sendBtn": "שלח הודעה"
+      "sendBtn": "שלח הודעה",
+      "successMsg": "ההודעה נשלחה בהצלחה!",
+      "errorMsg": "שליחת ההודעה נכשלה. אנא נסה שוב מאוחר יותר."
     }
   },
   "footer": {

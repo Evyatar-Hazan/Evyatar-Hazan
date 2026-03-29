@@ -9,7 +9,7 @@ const Footer = () => {
     { name: 'Github', icon: Github, href: 'https://github.com/Evyatar-Hazan' },
     { name: 'LinkedIn', icon: Linkedin, href: '#' },
     { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'Email', icon: Mail, href: 'mailto:your.email@example.com' },
+    { name: 'Email', icon: Mail, href: 'mailto:evyatarhazan3.14@gmail.com' },
   ];
 
   return (

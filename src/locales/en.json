@@ -64,7 +64,9 @@
       "emailPh": "john@example.com",
       "msgLbl": "Message",
       "msgPh": "Tell me about your project...",
-      "sendBtn": "Send Message"
+      "sendBtn": "Send Message",
+      "successMsg": "Message sent successfully!",
+      "errorMsg": "Failed to send message. Please try again later."
     }
   },
   "footer": {

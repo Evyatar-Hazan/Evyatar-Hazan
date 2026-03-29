@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Send } from 'lucide-react';
 import Button from '../Button';
@@ -5,10 +6,34 @@ import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent! (Mock)");
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/evyatarhazan3.14@gmail.com", {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+      
+      if (response.ok) {
+        alert(t('contact.form.successMsg'));
+        form.reset();
+      } else {
+        alert(t('contact.form.errorMsg'));
+      }
+    } catch (error) {
+      alert(t('contact.form.errorMsg'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -43,8 +68,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500 font-medium transition-colors duration-500">{t('contact.emailLbl')}</p>
-                  <a href="mailto:hello@example.com" className="text-lg hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                    hello@example.com
+                  <a href="mailto:evyatarhazan3.14@gmail.com" className="text-lg hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    evyatarhazan3.14@gmail.com
                   </a>
                 </div>
               </div>
@@ -85,8 +110,8 @@ const Contact = () => {
                 placeholder={t('contact.form.msgPh')}
               />
             </div>
-            <Button type="submit" className="w-full group">
-              {t('contact.form.sendBtn')}
+            <Button type="submit" className="w-full group" disabled={isSubmitting}>
+              {isSubmitting ? '...' : t('contact.form.sendBtn')}
               <Send className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
             </Button>
           </form>
