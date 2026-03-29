@@ -1,6 +1,8 @@
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
@@ -14,7 +16,7 @@ const Footer = () => {
     <footer className="w-full py-12 px-6 border-t border-neutral-900 bg-neutral-950 mt-20">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-neutral-400 text-sm">
-          © {currentYear} Evyatar Hazan. All rights reserved.
+          {t('footer.copyright', { year: currentYear })}
         </div>
         <div className="flex items-center gap-4">
           {socialLinks.map((link) => (

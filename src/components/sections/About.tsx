@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const skills = ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Node.js', 'Next.js'];
 
   return (
@@ -13,24 +15,18 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
-            About <span className="text-primary-500">Me</span>
+            {t('about.title1')} <span className="text-primary-500">{t('about.title2')}</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div className="text-neutral-400 leading-relaxed space-y-6 text-lg">
-              <p>
-                Hello! I'm Evyatar, a passionate Creative Developer based in Israel. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
-              </p>
-              <p>
-                My goal is to always build products that provide pixel-perfect, performant experiences. I focus heavily on writing clean, elegant code and creating intuitive user interfaces.
-              </p>
-              <p>
-                When I'm not at the computer, I'm usually spending time outdoors or exploring new technologies to learn.
-              </p>
+              <p>{t('about.p1')}</p>
+              <p>{t('about.p2')}</p>
+              <p>{t('about.p3')}</p>
             </div>
             
             <div className="space-y-6 flex flex-col justify-center">
-              <h3 className="text-2xl font-semibold text-white">My Tech Stack</h3>
+              <h3 className="text-2xl font-semibold text-white">{t('about.techStack')}</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, i) => (
                   <motion.div

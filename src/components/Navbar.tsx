@@ -1,5 +1,6 @@
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -12,6 +13,7 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [active, setActive] = useState('Home');
+  const { t, i18n } = useTranslation();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -20,9 +22,6 @@ const Navbar = () => {
     } else {
       setHidden(false);
     }
-
-    // Logic for active section could be added here or rely on IntersectionObserver,
-    // For now we'll keep it simple.
   });
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, name: string) => {
@@ -32,6 +31,10 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'he' : 'en');
   };
 
   return (
@@ -62,9 +65,15 @@ const Navbar = () => {
                 active === item.name ? 'text-primary-400' : 'text-neutral-400 hover:text-white'
               }`}
             >
-              {item.name}
+              {t(`nav.${item.name}`)}
             </a>
           ))}
+          <button 
+            onClick={toggleLanguage}
+            className="ml-2 px-3 py-1 bg-neutral-800 text-neutral-300 rounded-full text-xs font-bold hover:bg-neutral-700 transition"
+          >
+            {i18n.language === 'en' ? 'עב' : 'EN'}
+          </button>
         </div>
       </div>
     </motion.nav>

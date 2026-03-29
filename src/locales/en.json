@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "Home": "Home",
+    "About": "About",
+    "Projects": "Projects",
+    "Contact": "Contact"
+  },
+  "home": {
+    "available": "Available for new opportunities",
+    "greeting": "Hi, I'm",
+    "name": "Evyatar Hazan",
+    "subtitle": "Creative Developer specializing in building premium web experiences with",
+    "viewProjects": "View My Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title1": "About",
+    "title2": "Me",
+    "p1": "Hello! I'm Evyatar, a passionate Creative Developer based in Israel. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.",
+    "p2": "My goal is to always build products that provide pixel-perfect, performant experiences. I focus heavily on writing clean, elegant code and creating intuitive user interfaces.",
+    "p3": "When I'm not at the computer, I'm usually spending time outdoors or exploring new technologies to learn.",
+    "techStack": "My Tech Stack"
+  },
+  "projects": {
+    "title1": "Selected",
+    "title2": "Works",
+    "code": "Code",
+    "liveDemo": "Live Demo",
+    "items": {
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "A full-stack e-commerce solution with Next.js, Stripe, and a headless CMS."
+      },
+      "taskapp": {
+        "title": "Task Management App",
+        "description": "Real-time task management wrapper with drag and drop features and team collaboration."
+      },
+      "portfolio": {
+        "title": "Portfolio Website",
+        "description": "A premium, animated portfolio template built to showcase creative work."
+      }
+    }
+  },
+  "contact": {
+    "title1": "Let's work",
+    "title2": "together",
+    "subtitle": "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "getInTouch": "Get in touch",
+    "getInTouchDesc": "Fill out the form and I'll be in touch as soon as possible.",
+    "emailLbl": "Email",
+    "form": {
+      "nameLbl": "Name",
+      "namePh": "John Doe",
+      "emailLbl": "Email",
+      "emailPh": "john@example.com",
+      "msgLbl": "Message",
+      "msgPh": "Tell me about your project...",
+      "sendBtn": "Send Message"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Evyatar Hazan. All rights reserved."
+  }
+}
