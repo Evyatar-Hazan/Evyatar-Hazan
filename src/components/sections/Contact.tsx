@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 min-h-[80vh] flex items-center justify-center relative bg-neutral-100 dark:bg-neutral-950 border-t border-neutral-200/50 dark:border-neutral-900/50 transition-colors duration-500">
+    <section id="contact" className="py-24 px-4 md:px-6 min-h-[80vh] flex items-center justify-center relative bg-neutral-100 dark:bg-neutral-950 border-t border-neutral-200/50 dark:border-neutral-900/50 transition-colors duration-500">
       <div className="max-w-4xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 bg-white/70 dark:bg-neutral-900/40 p-8 md:p-12 rounded-3xl border border-neutral-200 dark:border-neutral-800 backdrop-blur-xl shadow-2xl dark:shadow-none transition-colors duration-500">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 bg-white/70 dark:bg-neutral-900/40 p-5 sm:p-8 md:p-12 rounded-3xl border border-neutral-200 dark:border-neutral-800 backdrop-blur-xl shadow-2xl dark:shadow-none transition-colors duration-500">
           <div className="flex flex-col justify-center">
             <div className="mb-10">
               <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-2 transition-colors duration-500">{t('contact.getInTouch')}</h3>
@@ -62,13 +62,13 @@ const Contact = () => {
             </div>
             
             <div className="space-y-6">
-              <div className="flex items-center gap-4 text-neutral-700 dark:text-neutral-300 transition-colors duration-500">
-                <div className="p-4 bg-primary-50 dark:bg-neutral-800/50 rounded-full text-primary-600 dark:text-primary-400">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-neutral-700 dark:text-neutral-300 transition-colors duration-500">
+                <div className="p-3 sm:p-4 bg-primary-50 dark:bg-neutral-800/50 rounded-full text-primary-600 dark:text-primary-400 shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500 font-medium transition-colors duration-500">{t('contact.emailLbl')}</p>
-                  <a href="mailto:evyatarhazan3.14@gmail.com" className="text-lg hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                  <a href="mailto:evyatarhazan3.14@gmail.com" className="text-base sm:text-lg hover:text-primary-600 dark:hover:text-primary-400 transition-colors break-all">
                     evyatarhazan3.14@gmail.com
                   </a>
                 </div>
