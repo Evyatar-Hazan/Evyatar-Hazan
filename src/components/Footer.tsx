@@ -13,9 +13,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full py-12 px-6 border-t border-neutral-900 bg-neutral-950 mt-20">
+    <footer className="w-full py-12 px-6 border-t border-neutral-200 dark:border-neutral-900 bg-neutral-100 dark:bg-black mt-20 transition-colors duration-500">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="text-neutral-400 text-sm">
+        <div className="text-neutral-500 dark:text-neutral-400 text-sm transition-colors duration-500">
           {t('footer.copyright', { year: currentYear })}
         </div>
         <div className="flex items-center gap-4">
@@ -25,7 +25,7 @@ const Footer = () => {
               href={link.href}
               target={link.href.startsWith('http') ? '_blank' : undefined}
               rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="p-3 rounded-full bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 hover:bg-neutral-800 transition-all flex items-center justify-center group"
+              className="p-3 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-300 dark:hover:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-all flex items-center justify-center group"
               aria-label={link.name}
             >
               <link.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />

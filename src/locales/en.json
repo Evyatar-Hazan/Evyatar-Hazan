@@ -9,42 +9,42 @@
     "available": "Available for new opportunities",
     "greeting": "Hi, I'm",
     "name": "Evyatar Hazan",
-    "subtitle": "Creative Developer specializing in building premium web experiences with",
+    "subtitle": "AI & Automation Engineer | Full Stack Developer specializing in",
     "viewProjects": "View My Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "title1": "About",
     "title2": "Me",
-    "p1": "Hello! I'm Evyatar, a passionate Creative Developer based in Israel. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.",
-    "p2": "My goal is to always build products that provide pixel-perfect, performant experiences. I focus heavily on writing clean, elegant code and creating intuitive user interfaces.",
-    "p3": "When I'm not at the computer, I'm usually spending time outdoors or exploring new technologies to learn.",
+    "p1": "Hello! I'm Evyatar, an AI-focused Automation & Full Stack Developer based in Israel. I specialize in designing scalable systems, intelligent workflows, and user-facing technology.",
+    "p2": "In my recent roles as an Automation Architect and Full Stack Tech Lead, I have designed scalable automation frameworks for iOS, Android, and Web, and integrated AI-based computer vision models to dynamically detect UI elements. I have also led development teams in building robust React Native platforms, architecting frontend infrastructures, and establishing efficient CI/CD lifecycles.",
+    "p3": "I am passionate about the practical adoption of LLM technologies, improving AI system quality, and delivering pixel-perfect, intuitive applications.",
     "techStack": "My Tech Stack"
   },
   "projects": {
     "title1": "Selected",
     "title2": "Works",
     "code": "Code",
-    "liveDemo": "Live Demo",
+    "liveDemo": "Live Info",
     "items": {
-      "ecommerce": {
-        "title": "E-Commerce Platform",
-        "description": "A full-stack e-commerce solution with Next.js, Stripe, and a headless CMS."
+      "password_gen": {
+        "title": "Password Generator",
+        "description": "A React Native application that locally generates highly secure deterministic passwords from a simple two-word input without collecting or storing any data."
       },
-      "taskapp": {
-        "title": "Task Management App",
-        "description": "Real-time task management wrapper with drag and drop features and team collaboration."
+      "ai_automation": {
+        "title": "AI Computer Vision Automation",
+        "description": "Integrated YOLO computer vision models to dynamically detect UI elements in mobile applications, significantly improving cross-platform testing resilience."
       },
-      "portfolio": {
-        "title": "Portfolio Website",
-        "description": "A premium, animated portfolio template built to showcase creative work."
+      "spool": {
+        "title": "Collaborative Travel Platform",
+        "description": "Designed frontend architecture in React Native and implemented a complex trip distribution algorithmic engine handling real-time data flow."
       }
     }
   },
   "contact": {
     "title1": "Let's work",
     "title2": "together",
-    "subtitle": "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    "subtitle": "I'm currently looking for new opportunities. Whether you have an inquiry regarding LLM workflows, automation, or frontend architecture, I'll try my best to get back to you!",
     "getInTouch": "Get in touch",
     "getInTouchDesc": "Fill out the form and I'll be in touch as soon as possible.",
     "emailLbl": "Email",
