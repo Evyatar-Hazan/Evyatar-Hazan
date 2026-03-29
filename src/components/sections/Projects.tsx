@@ -10,7 +10,7 @@ const Projects = () => {
       id: "online_converter",
       tags: ["React", "TypeScript", "Vite", "js-yaml"],
       githubUrl: "https://github.com/Evyatar-Hazan/online-converter",
-      liveUrl: "#"
+      liveUrl: "https://online-converter.evyatarhazan.com"
     },
     {
       id: "ai_automation",
