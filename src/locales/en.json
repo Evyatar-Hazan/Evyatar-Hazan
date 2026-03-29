@@ -44,6 +44,10 @@
         "title": "Emergency Protocol Diagram",
         "description": "Interactive emergency medical protocol diagrams built with React Flow and Zustand, providing clear, step-by-step visual guidance for BLS (Basic Life Support) procedures."
       },
+      "lev_chedva": {
+        "title": "Lev-Chedva Website",
+        "description": "A professional and accessible organization website featuring a modern design, full internationalization (i18n) support, and smooth animations using Framer Motion."
+      },
       "password_gen": {
         "title": "Password Generator",
         "description": "A React Native application that locally generates highly secure deterministic passwords from a simple two-word input without collecting or storing any data."

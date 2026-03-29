@@ -17,6 +17,12 @@ const Projects = () => {
       tags: ["React", "TypeScript", "React Flow", "Zustand", "Tailwind"],
       githubUrl: "https://github.com/Evyatar-Hazan/emergency-protocol-diagram",
       liveUrl: "https://bls-protocol.evyatarhazan.com"
+    },
+    {
+      id: "lev_chedva",
+      tags: ["React", "TypeScript", "Framer Motion", "i18n", "Tailwind"],
+      githubUrl: "https://github.com/Evyatar-Hazan/lev-chedva-website",
+      liveUrl: "https://lev-chedva.evyatarhazan.com"
     }
   ];
 
