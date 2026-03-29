@@ -9,17 +9,26 @@
     "available": "Available for new opportunities",
     "greeting": "Hi, I'm",
     "name": "Evyatar Hazan",
-    "subtitle": "AI & Automation Engineer | Full Stack Developer specializing in",
+    "subtitle": "Full Stack Developer & AI Automation Specialist",
+    "description": "Full Stack Developer and AI-driven automation infrastructure expert. I specialize in designing and developing mobile applications, scalable web systems, and advanced Computer Vision solutions. The synergy between end-to-end product development and intelligent validation technologies enables me to build smart, robust, and high-performance software systems.",
     "viewProjects": "View My Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "title1": "About",
     "title2": "Me",
-    "p1": "Hello! I'm Evyatar, an AI-focused Automation & Full Stack Developer based in Israel. I specialize in designing scalable systems, intelligent workflows, and user-facing technology.",
-    "p2": "In my recent roles as an Automation Architect and Full Stack Tech Lead, I have designed scalable automation frameworks for iOS, Android, and Web, and integrated AI-based computer vision models to dynamically detect UI elements. I have also led development teams in building robust React Native platforms, architecting frontend infrastructures, and establishing efficient CI/CD lifecycles.",
-    "p3": "I am passionate about the practical adoption of LLM technologies, improving AI system quality, and delivering pixel-perfect, intuitive applications.",
-    "techStack": "My Tech Stack"
+    "p1": "With extensive experience in software development and automation, I specialize in building technological products that combine an excellent user experience with robust backend architecture. My expertise includes native and cross-platform application development, deploying complex cloud services, and implementing Deep Learning models to solve visual and operational challenges.",
+    "p2": "I am a strong advocate for Clean Code principles, Privacy by Design as a standard, and utilizing advanced CI/CD pipelines to ensure continuous quality. Over the years, I have led technological projects from initial characterization to full-scale deployment, providing technical mentorship to teams and collaborating closely with Product and QA departments.",
+    "techStack": "Technical Stack",
+    "categories": {
+      "webMobile": "Web & Mobile (Full Stack)",
+      "languages": "Programming Languages",
+      "aiCv": "AI & Computer Vision",
+      "devops": "Infrastructure & DevOps",
+      "databases": "Databases",
+      "automation": "Automation & QA",
+      "methodologies": "Methodologies/Leadership"
+    }
   },
   "projects": {
     "title1": "Selected",
