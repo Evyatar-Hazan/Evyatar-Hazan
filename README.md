@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# Hey there! I'm Evyatar Hazan 👋
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🚀 Creative Developer | Software Engineer
 
-Currently, two official plugins are available:
+I am a passionate software developer dedicated to building visually stunning, highly accessible, and technically robust web applications. My focus lies in creating seamless user experiences through modern technologies and creative problem-solving.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+### 🛠️ My Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend & Design**
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-## Expanding the ESLint configuration
+**Backend & Tools**
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![i18next](https://img.shields.io/badge/i18next-009688?style=for-the-badge&logo=i18next&logoColor=white)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🌟 Featured Projects
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+#### 🔄 [Online Converter](https://github.com/Evyatar-Hazan/online-converter)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+A powerful, client-side media conversion tool. Supports various formats with a focus on speed and privacy.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 🏥 [Emergency Protocol Diagram](https://github.com/Evyatar-Hazan/emergency-protocol-diagram)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Interactive BLS (Basic Life Support) protocol diagrams built with **React Flow**. Designed for medical professionals and trainees to visualize life-saving steps.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### 🏥 [Lev-Chedva Website](https://github.com/Evyatar-Hazan/lev-chedva-website)
+
+A professional organization website featuring smooth animations, full internationalization (i18n), and a mobile-first accessible design.
+
+---
+
+### 📊 GitHub Stats
+
+![Evyatar's GitHub stats](https://github-readme-stats.vercel.app/api?username=Evyatar-Hazan&show_icons=true&theme=transparent)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Evyatar-Hazan&layout=compact&theme=transparent)
+
+---
+
+### 📫 Let's Connect
+
+- 📧 Email: [evyatarhazan3.14@gmail.com](mailto:evyatarhazan3.14@gmail.com)
+- 🌐 Portfolio: Coming Soon / [Check my GitHub Repos](https://github.com/Evyatar-Hazan)
+
+---
+<p align="center">
+  <i>"Code is poetry in motion."</i>
+</p>
