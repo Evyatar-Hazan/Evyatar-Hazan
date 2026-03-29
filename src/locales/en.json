@@ -40,6 +40,10 @@
         "title": "Online Converter",
         "description": "A robust online data conversion tool built with React and TypeScript, allowing users to seamlessly and securely convert formats locally on the client layer."
       },
+      "emergency_protocol": {
+        "title": "Emergency Protocol Diagram",
+        "description": "Interactive emergency medical protocol diagrams built with React Flow and Zustand, providing clear, step-by-step visual guidance for BLS (Basic Life Support) procedures."
+      },
       "password_gen": {
         "title": "Password Generator",
         "description": "A React Native application that locally generates highly secure deterministic passwords from a simple two-word input without collecting or storing any data."

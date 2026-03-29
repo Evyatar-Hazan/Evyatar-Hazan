@@ -11,6 +11,12 @@ const Projects = () => {
       tags: ["React", "TypeScript", "Vite", "js-yaml"],
       githubUrl: "https://github.com/Evyatar-Hazan/online-converter",
       liveUrl: "https://online-converter.evyatarhazan.com"
+    },
+    {
+      id: "emergency_protocol",
+      tags: ["React", "TypeScript", "React Flow", "Zustand", "Tailwind"],
+      githubUrl: "https://github.com/Evyatar-Hazan/emergency-protocol-diagram",
+      liveUrl: "https://bls-protocol.evyatarhazan.com"
     }
   ];
 
