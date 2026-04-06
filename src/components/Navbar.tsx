@@ -46,8 +46,10 @@ const Navbar = () => {
     }
   };
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'he' : 'en');
+  const toggleLanguage = async () => {
+    const newLang = i18n.language === 'en' ? 'he' : 'en';
+    localStorage.setItem('i18nextLng', newLang);
+    await i18n.changeLanguage(newLang);
   };
 
   return (

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import About from './components/sections/About';
@@ -12,11 +13,18 @@ import ScrollProgress from './components/animations/ScrollProgress';
 function App() {
   const { i18n } = useTranslation();
   const dir = i18n.language === 'he' ? 'rtl' : 'ltr';
+  
   // Use custom theme hook to initialize global dark class mapping correctly
-  useTheme(); 
+  useTheme();
+  
+  // Update HTML dir attribute immediately when language changes
+  useEffect(() => {
+    document.documentElement.dir = dir;
+    document.documentElement.lang = i18n.language;
+  }, [dir, i18n.language]); 
   
   return (
-    <div dir={dir} className={`min-h-screen font-sans ${dir === 'rtl' ? '[&_*]:font-sans-hebrew' : ''}`}>
+    <div className={`min-h-screen font-sans ${dir === 'rtl' ? '[&_*]:font-sans-hebrew' : ''}`}>
       <CustomCursor />
       <ScrollProgress />
       <Navbar />

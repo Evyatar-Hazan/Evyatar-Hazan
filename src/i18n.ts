@@ -14,6 +14,14 @@ i18n
       he: { translation: he }
     },
     fallbackLng: 'en',
+    lng: localStorage.getItem('i18nextLng') || 'en',
+    react: {
+      useSuspense: false
+    },
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage']
+    },
     interpolation: {
       escapeValue: false // react already safes from xss
     }
