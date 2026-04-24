@@ -43,4 +43,11 @@ describe('App', () => {
     expect(setItemSpy).toHaveBeenCalledWith('i18nextLng', 'he');
     expect(changeLanguageMock).toHaveBeenCalledWith('he');
   });
+
+  it('marks the active nav item with aria-current', () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('link', { name: 'nav.About' }));
+    expect(screen.getByRole('link', { name: 'nav.About' })).toHaveAttribute('aria-current', 'page');
+  });
 });
