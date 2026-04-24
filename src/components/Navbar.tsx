@@ -83,6 +83,7 @@ const Navbar = () => {
               key={item.name}
               href={item.href}
               onClick={(e) => handleClick(e, item.href, item.name)}
+              aria-current={active === item.name ? 'page' : undefined}
               className={`text-sm font-medium transition-colors ${
                 active === item.name ? 'text-primary-500 dark:text-primary-400' : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
@@ -162,6 +163,7 @@ const Navbar = () => {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleClick(e, item.href, item.name)}
+                    aria-current={active === item.name ? 'page' : undefined}
                     className={`text-2xl font-bold transition-colors ${
                       active === item.name ? 'text-primary-500' : 'text-neutral-600 dark:text-neutral-400'
                     }`}
