@@ -25,6 +25,10 @@ const Navbar = () => {
     } else {
       document.body.style.overflow = 'unset';
     }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -67,6 +71,7 @@ const Navbar = () => {
           href="#home" 
           onClick={(e) => handleClick(e, '#home', 'Home')}
           className="text-neutral-900 dark:text-white font-bold tracking-tight text-xl transition-colors"
+          aria-label="Go to home section"
         >
           EH<span className="text-primary-500">.</span>
         </a>
@@ -88,16 +93,20 @@ const Navbar = () => {
           <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-700 mx-2 transition-colors"></div>
           
           <button 
+            type="button"
             onClick={toggleTheme}
             className="p-1.5 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
             title="Toggle theme"
+            aria-label="Toggle color theme"
           >
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           
           <button 
+            type="button"
             onClick={toggleLanguage}
             className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 rounded-full text-xs font-bold hover:bg-neutral-200 dark:hover:bg-neutral-700 transition"
+            aria-label="Toggle language"
           >
             {i18n.language === 'en' ? 'עב' : 'EN'}
           </button>
@@ -106,14 +115,20 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="sm:hidden flex items-center gap-4">
           <button 
+            type="button"
             onClick={toggleTheme}
             className="p-1.5 text-neutral-500 dark:text-neutral-400 transition-colors"
+            aria-label="Toggle color theme"
           >
             {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
           <button 
+            type="button"
             onClick={() => setIsOpen(!isOpen)}
             className="p-1.5 text-neutral-900 dark:text-white transition-colors"
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation-menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -134,6 +149,7 @@ const Navbar = () => {
             />
             
             <motion.div
+              id="mobile-navigation-menu"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
@@ -158,8 +174,10 @@ const Navbar = () => {
               <div className="w-full h-px bg-neutral-200 dark:bg-neutral-800"></div>
               
               <button 
+                type="button"
                 onClick={toggleLanguage}
                 className="w-full py-4 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white rounded-2xl text-lg font-bold flex items-center justify-center gap-2"
+                aria-label="Toggle language"
               >
                 <span>{i18n.language === 'en' ? 'עברית (HE)' : 'English (EN)'}</span>
               </button>
