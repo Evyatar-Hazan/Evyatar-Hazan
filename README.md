@@ -22,6 +22,27 @@ I am a passionate software developer dedicated to building visually stunning, hi
 
 ---
 
+### 🧪 Development Workflow
+
+Run the project locally:
+
+```bash
+npm install
+npm run dev
+```
+
+Validate code quality before pushing changes:
+
+```bash
+npm run validate
+```
+
+This runs:
+- `npm run lint`
+- `npm run build`
+
+---
+
 ### 🌟 Featured Projects
 
 #### 🔄 [Online Converter](https://github.com/Evyatar-Hazan/online-converter)
