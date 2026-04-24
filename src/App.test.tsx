@@ -61,4 +61,14 @@ describe('App', () => {
     expect(screen.getByRole('button', { name: /open navigation menu/i })).toBeInTheDocument();
     expect(document.body.style.overflow).toBe('unset');
   });
+
+  it('restores body scroll when app unmounts with mobile menu open', () => {
+    const { unmount } = render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: /open navigation menu/i }));
+    expect(document.body.style.overflow).toBe('hidden');
+
+    unmount();
+    expect(document.body.style.overflow).toBe('unset');
+  });
 });
