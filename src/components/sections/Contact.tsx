@@ -29,7 +29,7 @@ const Contact = () => {
       } else {
         alert(t('contact.form.errorMsg'));
       }
-    } catch (error) {
+    } catch {
       alert(t('contact.form.errorMsg'));
     } finally {
       setIsSubmitting(false);
