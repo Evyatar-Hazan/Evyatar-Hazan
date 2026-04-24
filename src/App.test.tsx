@@ -1,10 +1,12 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+const changeLanguageMock = vi.fn().mockResolvedValue(undefined);
+
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string) => key,
-    i18n: { language: 'en' },
+    i18n: { language: 'en', changeLanguage: changeLanguageMock },
   }),
 }));
 
@@ -29,5 +31,16 @@ describe('App', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /close navigation menu/i }));
     expect(document.body.style.overflow).toBe('unset');
+  });
+
+  it('updates i18n and localStorage when language toggle is clicked', () => {
+    const setItemSpy = vi.spyOn(window.localStorage, 'setItem');
+    render(<App />);
+
+    const languageButtons = screen.getAllByRole('button', { name: /toggle language/i });
+    fireEvent.click(languageButtons[0]);
+
+    expect(setItemSpy).toHaveBeenCalledWith('i18nextLng', 'he');
+    expect(changeLanguageMock).toHaveBeenCalledWith('he');
   });
 });
