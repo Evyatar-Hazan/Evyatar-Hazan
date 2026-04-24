@@ -1,14 +1,28 @@
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import About from './components/sections/About';
-import Projects from './components/sections/Projects';
-import Contact from './components/sections/Contact';
 import Footer from './components/Footer';
 import { useTheme } from './hooks/useTheme';
 import CustomCursor from './components/animations/CustomCursor';
 import ScrollProgress from './components/animations/ScrollProgress';
+
+const About = lazy(() => import('./components/sections/About'));
+const Projects = lazy(() => import('./components/sections/Projects'));
+const Contact = lazy(() => import('./components/sections/Contact'));
+
+type SectionFallbackProps = {
+  id: string;
+  minHeightClassName: string;
+};
+
+const SectionFallback = ({ id, minHeightClassName }: SectionFallbackProps) => (
+  <section
+    id={id}
+    aria-busy="true"
+    className={`${minHeightClassName} px-6 py-24 bg-transparent`}
+  />
+);
 
 function App() {
   const { i18n } = useTranslation();
@@ -30,9 +44,15 @@ function App() {
       <Navbar />
       <main>
         <Home />
-        <About />
-        <Projects />
-        <Contact />
+        <Suspense fallback={<SectionFallback id="about" minHeightClassName="min-h-[70vh]" />}>
+          <About />
+        </Suspense>
+        <Suspense fallback={<SectionFallback id="projects" minHeightClassName="min-h-screen" />}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={<SectionFallback id="contact" minHeightClassName="min-h-[80vh]" />}>
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </div>
