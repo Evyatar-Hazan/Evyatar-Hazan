@@ -50,4 +50,15 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('link', { name: 'nav.About' }));
     expect(screen.getByRole('link', { name: 'nav.About' })).toHaveAttribute('aria-current', 'page');
   });
+
+  it('closes the mobile menu when clicking the backdrop', () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: /open navigation menu/i }));
+    expect(document.body.style.overflow).toBe('hidden');
+
+    fireEvent.click(screen.getByTestId('mobile-menu-backdrop'));
+    expect(screen.getByRole('button', { name: /open navigation menu/i })).toBeInTheDocument();
+    expect(document.body.style.overflow).toBe('unset');
+  });
 });

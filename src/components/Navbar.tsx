@@ -142,6 +142,7 @@ const Navbar = () => {
           <>
             {/* Backdrop */}
             <motion.div
+              data-testid="mobile-menu-backdrop"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
