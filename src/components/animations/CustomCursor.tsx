@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const CustomCursor = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile] = useState(
+    () => typeof window !== 'undefined' && (window.innerWidth < 768 || 'ontouchstart' in window)
+  );
   
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -14,9 +16,7 @@ const CustomCursor = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    // Disable on touch devices
-    if (window.innerWidth < 768 || 'ontouchstart' in window) {
-      setIsMobile(true);
+    if (isMobile) {
       return;
     }
 
@@ -53,8 +53,9 @@ const CustomCursor = () => {
       window.removeEventListener('mousemove', moveCursor);
       window.removeEventListener('mouseover', handleMouseOver);
       document.body.style.cursor = 'auto';
+      iterators.forEach(el => (el as HTMLElement).style.cursor = '');
     };
-  }, []);
+  }, [cursorX, cursorY, isMobile]);
 
   if (isMobile) return null;
 
