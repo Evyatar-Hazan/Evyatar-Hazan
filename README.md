@@ -1,77 +1,34 @@
-# Hey there! I'm Evyatar Hazan 👋
+# Evyatar Hazan
 
-### 🚀 Creative Developer | Software Engineer
+Full Stack Developer building practical, production-ready software with React, TypeScript, Node.js, Express, Prisma, React Native, and automation workflows.
 
-I am a passionate software developer dedicated to building visually stunning, highly accessible, and technically robust web applications. My focus lies in creating seamless user experiences through modern technologies and creative problem-solving.
+I care about clear repositories: focused project names, working scripts, CI, useful READMEs, and careful handling of secrets.
 
----
+[Portfolio](https://evyatar-hazan.github.io/) · [GitHub](https://github.com/Evyatar-Hazan) · [Email](mailto:evyatarhazan3.14@gmail.com)
 
-### 🛠️ My Tech Stack
+## Featured Projects
 
-**Frontend & Design**
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+| Project | What it is | Stack |
+| --- | --- | --- |
+| [Lev Hedva](https://github.com/Evyatar-Hazan/lev-hedva) | Active full-stack product monorepo for website, client, and backend API | React, TypeScript, Node |
+| [Password Generator](https://github.com/Evyatar-Hazan/password-generator) | Privacy-first password generator with mobile app and reusable core package | React Native, TypeScript |
+| [Test Yourself](https://github.com/Evyatar-Hazan/test-yourself) | Full-stack learning and quiz platform | React, Express, TypeScript |
+| [Emergency Protocol Diagram](https://github.com/Evyatar-Hazan/emergency-protocol-diagram) | Medical protocol monorepo with auth, comments, API, and CI | React, Express, Prisma |
+| [Online Converter](https://github.com/Evyatar-Hazan/online-converter) | Browser-only converter for JSON, CSV, XML, and YAML | React, TypeScript, Vite |
+| [United Hatzalah Shoham Branch](https://github.com/Evyatar-Hazan/united-hatzalah-shoham-branch) | Branch website and admin API monorepo | React, Express, Prisma |
 
-**Backend & Tools**
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![i18next](https://img.shields.io/badge/i18next-009688?style=for-the-badge&logo=i18next&logoColor=white)
+## Current Focus
 
----
+- Full-stack monorepos that are easy to run and maintain
+- Frontend systems with polished UX and accessible interfaces
+- Backend APIs with clear validation and deployment paths
+- Automation and developer workflows that make projects more reliable
+- Keeping public GitHub clean, credible, and easy to navigate
 
-### 🧪 Development Workflow
+## Tech
 
-Run the project locally:
+`React` `TypeScript` `Node.js` `Express` `Prisma` `React Native` `Vite` `GitHub Actions` `Python` `Automation`
 
-```bash
-npm install
-npm run dev
-```
+## Notes
 
-Validate code quality before pushing changes:
-
-```bash
-npm run validate
-```
-
-This runs:
-- `npm run lint`
-- `npm run build`
-
----
-
-### 🌟 Featured Projects
-
-#### 🔄 [Online Converter](https://github.com/Evyatar-Hazan/online-converter)
-
-A powerful, client-side media conversion tool. Supports various formats with a focus on speed and privacy.
-
-#### 🏥 [Emergency Protocol Diagram](https://github.com/Evyatar-Hazan/emergency-protocol-diagram)
-
-Interactive BLS (Basic Life Support) protocol diagrams built with **React Flow**. Designed for medical professionals and trainees to visualize life-saving steps.
-
-#### 🏥 [Lev-Chedva Website](https://github.com/Evyatar-Hazan/lev-chedva-website)
-
-A professional organization website featuring smooth animations, full internationalization (i18n), and a mobile-first accessible design.
-
----
-
-### 📊 GitHub Stats
-
-![Evyatar's GitHub stats](https://github-readme-stats.vercel.app/api?username=Evyatar-Hazan&show_icons=true&theme=transparent)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Evyatar-Hazan&layout=compact&theme=transparent)
-
----
-
-### 📫 Let's Connect
-
-- 📧 Email: [evyatarhazan3.14@gmail.com](mailto:evyatarhazan3.14@gmail.com)
-- 🌐 Portfolio: Coming Soon / [Check my GitHub Repos](https://github.com/Evyatar-Hazan)
-
----
-<p align="center">
-  <i>"Code is poetry in motion."</i>
-</p>
+Older experiments and exercises were moved into the private [`evyatar-archive`](https://github.com/evyatar-archive) organization so this profile stays focused on maintained, presentable work.
